@@ -34,13 +34,52 @@ class Homepage extends StatelessWidget {
       ),
       child: Column(
         children: [
-          Padding(
-            padding: EdgeInsets.all(81.0),
-            child: Text('PIG WEIGHT \n CALCULATOR',
-                style: TextStyle(fontSize: 34, color: Colors.red),
-                textAlign: TextAlign.center),
+          Column(
+            children: [
+              Container(
+                padding: const EdgeInsets.all(81.0),
+                child: const Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text('PIG WEIGHT \n CALCULATOR',
+                      style: TextStyle(fontSize: 35, color: Colors.red),
+                      textAlign: TextAlign.center),
+                ),
+              ),
+              Image.asset('assets/images/pig.png', width: 300),
+              Row(
+                children: [
+                  Flexible(
+                      child: TextField(
+                    decoration: InputDecoration(
+                      contentPadding: EdgeInsets.all(10),
+                    ),
+                  )),
+                  Flexible(
+                      child: TextField(
+                    decoration: InputDecoration(
+                      contentPadding: EdgeInsets.all(10),
+                    ),
+                  ))
+                ],
+              )
+            ],
           ),
-          Image.asset('assets/images/pig.png',width: 250,),
+          const SizedBox(
+            width: 200.0,
+            height: 150.0,
+          ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: ElevatedButton(
+              onPressed: () {},
+              child: const Text('CALCULATE'),
+              style: ElevatedButton.styleFrom(
+                  primary: Colors.red,
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+                  alignment: Alignment.center),
+            ),
+          )
         ],
       ),
     ));
