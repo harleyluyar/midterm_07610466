@@ -26,14 +26,18 @@ class Homepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Test'),
+        body: Container(
+      constraints: BoxConstraints.expand(),
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+            image: AssetImage("assets/images/bg.jpg"), fit: BoxFit.cover),
       ),
-      body:  Container(
-        child: Container(
-          color: Colors.teal,
-        ),
+      child: Padding(
+        padding: const EdgeInsets.all(81.0),
+        child: const Text('PIG WEIGHT \n CALCULATOR',
+            style: TextStyle(fontSize: 34, color: Colors.red),
+            textAlign: TextAlign.center),
       ),
-    );
+    ));
   }
 }
