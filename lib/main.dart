@@ -32,11 +32,16 @@ class Homepage extends StatelessWidget {
         image: DecorationImage(
             image: AssetImage("assets/images/bg.jpg"), fit: BoxFit.cover),
       ),
-      child: Padding(
-        padding: const EdgeInsets.all(81.0),
-        child: const Text('PIG WEIGHT \n CALCULATOR',
-            style: TextStyle(fontSize: 34, color: Colors.red),
-            textAlign: TextAlign.center),
+      child: Column(
+        children: [
+          Padding(
+            padding: EdgeInsets.all(81.0),
+            child: Text('PIG WEIGHT \n CALCULATOR',
+                style: TextStyle(fontSize: 34, color: Colors.red),
+                textAlign: TextAlign.center),
+          ),
+          Image.asset('assets/images/pig.png',width: 250,),
+        ],
       ),
     ));
   }
